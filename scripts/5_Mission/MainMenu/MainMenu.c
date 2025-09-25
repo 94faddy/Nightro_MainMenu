@@ -55,8 +55,8 @@ modded class MainMenu extends UIScriptedMenu
 		if (m_Video_DF.GetState() != VideoState.NONE)
 			return true;
 		
-		CopyFile("Nightro_MainMenu/data/Video1.mp4", "$profile:Video1.mp4");
-		CopyFile("Nightro_MainMenu/data/Video2.mp4", "$profile:Video2.mp4");
+		CopyFile("Nightro_MainMenu\\data\\Video1.mp4", "$profile:Video1.mp4");
+		CopyFile("Nightro_MainMenu\\data\\Video2.mp4", "$profile:Video2.mp4");
 		int rnd = Math.RandomIntInclusive(0,1);
 		switch (rnd)
 		{
