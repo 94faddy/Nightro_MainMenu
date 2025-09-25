@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{39BB1D86B3EF0DD0}Nightro_MainMenu/gui/MainMenu/Images/background.edds"
+ Author "win-763n7ma0u4h"
+ ChangeDate -555503503
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "background.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

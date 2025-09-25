@@ -1,0 +1,421 @@
+FrameWidgetClass main_menu_root {
+ visible 1
+ position 0 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ {
+  VideoWidgetClass DF_Video {
+   visible 1
+   ignorepointer 1
+   ignoregloballv 1
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   mode opaque
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   font "gui/fonts/sdf_MetronLight42"
+   "outline color" 0 0 0 1
+   "background color" 0 0 0 1
+  }
+  ImageWidgetClass vignette {
+   visible 1
+   ignorepointer 0
+   color 1 1 1 0
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   mode additive
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   filter 0
+   nocache 1
+   {
+    FrameWidgetClass TimeF {
+     ignorepointer 1
+     position -0 0
+     size 0.13189 0.07975
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      TextWidgetClass TimeWidget {
+       ignorepointer 1
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "00:00"
+       font "gui/fonts/sdf_NotoSansCJK-Light28"
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    FrameWidgetClass panel_root {
+     visible 1
+     ignorepointer 1
+     position -0.36322 0.23764
+     size 0.18333 0.73353
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ButtonWidgetClass Play_game {
+       color 1 1 1 0
+       position 0.00695 0.04769
+       size 0.83786 0.07023
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style EmptyHighlight
+       switch normal
+       {
+        ImageWidgetClass Play_game_image {
+         visible 1
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "DF_Layouts/gui/edds/game.edds"
+         mode blend
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass persona_button {
+       visible 1
+       color 1 1 1 0
+       position 0.08747 -0.27521
+       size 0.80431 0.04491
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style EmptyHighlight
+       "no focus" 1
+       {
+        ImageWidgetClass persona_button_image {
+         visible 1
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "DF_Layouts/gui/edds/plair.edds"
+         mode blend
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass settings_button {
+       color 1 1 1 0
+       position 0.02757 -0.17701
+       size 0.88987 0.05432
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style EmptyHighlight
+       "no focus" 1
+       {
+        ImageWidgetClass settings_button_image {
+         visible 1
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "DF_Layouts/gui/edds/setings.edds"
+         mode blend
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass exit_button {
+       color 1 1 1 0
+       position -0.13865 0.03252
+       size 0.55257 0.05886
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       draggable 0
+       style EmptyHighlight
+       "no focus" 1
+       {
+        ImageWidgetClass exit_button_image {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "DF_Layouts/gui/edds/exit.edds"
+         mode blend
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+         filter 0
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass main_panel_bot_fw {
+     visible 1
+     ignorepointer 1
+     color 0 0.0118 0.0196 0
+     position 0.0208 0.02963
+     size 0.1292 0.05926
+     halign right_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style rover_sim_colorable
+     {
+      ButtonWidgetClass custom_button1 {
+       color 1 1 1 0
+       position 0 0
+       size 0.355 1
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style EmptyHighlight
+       "no focus" 1
+       {
+        ImageWidgetClass custom_button1_image {
+         ignorepointer 1
+         color 1 1 1 0.4471
+         position -0.00036 0
+         size 0.99929 1.25
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "DF_Layouts\gui\edds\WR.edds"
+         mode blend
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+        }
+       }
+      }
+      ButtonWidgetClass custom_button2 {
+       color 1 1 1 0
+       position 12 0
+       size 64 64
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style EmptyHighlight
+       "no focus" 1
+       {
+        ImageWidgetClass custom_button2_image {
+         disabled 0
+         clipchildren 1
+         inheritalpha 0
+         ignorepointer 1
+         ignoregloballv 0
+         keepsafezone 0
+         color 1 1 1 0.4471
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scaled 1
+         image0 "DF_Layouts\gui\edds\VK.edds"
+         mode additive
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+         filter 1
+         nocache 0
+        }
+       }
+      }
+      ButtonWidgetClass custom_button3 {
+       color 1 1 1 0
+       position 0 0
+       size 72 64
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style EmptyHighlight
+       "no focus" 1
+       {
+        ImageWidgetClass custom_button3_image {
+         ignorepointer 1
+         color 1 1 1 0.4471
+         position -0.00089 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         image0 "DF_Layouts\gui\edds\DS.edds"
+         mode blend
+         "src alpha" 1
+         "stretch mode" stretch_w_h
+         filter 1
+        }
+       }
+      }
+     }
+    }
+    ImageWidgetClass logo_iw {
+     visible 1
+     ignorepointer 1
+     position 0.01408 -0.01733
+     size 0.4744 0.23826
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     fixaspect fixwidth
+     image0 ""
+     imageTexture "{933C4B2B0E444DDD}DF_Layouts/gui/edds/logo.edds"
+     mode additive
+     "src alpha" 1
+     "stretch mode" stretch_w_h
+    }
+   }
+  }
+  PanelWidgetClass exitPanel {
+   visible 0
+   clipchildren 1
+   ignorepointer 1
+   keepsafezone 0
+   color 0 0 0 0.5882
+   position 0 0
+   size 0.3 0.2
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   style rover_sim_colorable
+   "no focus" 0
+   {
+    TextWidgetClass exit_text {
+     visible 1
+     ignorepointer 1
+     color 0.9922 0.9765 0.9765 1
+     position 0 0.1
+     size 0.9 0.25
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Normal
+     text "#main_menu_exit_desc"
+     font "gui/fonts/etelkatextpro"
+     text_proportion 0.6
+     "text halign" center
+     "text valign" center
+    }
+    ButtonWidgetClass button_Yes {
+     color 0.4118 0.4588 0.2745 1
+     position 0 0
+     size 0.5 0.25
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style EmptyHighlight
+     "no focus" 1
+     text "#menu_yes"
+     text_proportion 0.5
+     font "gui/fonts/etelkatextpro"
+    }
+    ButtonWidgetClass button_No {
+     color 0.4118 0.4588 0.2745 1
+     position 0 0
+     size 0.5 0.25
+     halign right_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style EmptyHighlight
+     "no focus" 1
+     text "#menu_no"
+     text_proportion 0.5
+     font "gui/fonts/etelkatextpro"
+    }
+   }
+  }
+ }
+}
